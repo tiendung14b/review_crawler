@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Booking Attractions Scraper",
+  "version": "1.0",
+  "description": "Tự động cào dữ liệu đánh giá trên trang Booking.com (Attractions)",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.booking.com/attractions/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Mở trình cào dữ liệu"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.booking.com/attractions/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
