@@ -102,6 +102,28 @@
     .export-btn:hover:not(:disabled) {
       background-color: #e0e0e0;
     }
+    .input-group {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .input-group label {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .input-group input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+      width: 100%;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -110,6 +132,30 @@
   <div class="status-card">
     <div class="status-text" id="statusText">Trạng thái: Đang rảnh</div>
     <div>Đã thu thập: <span class="count" id="reviewCount">0</span></div>
+  </div>
+
+  <div class="input-group">
+    <label for="locationName">Tên địa điểm:</label>
+    <input type="text" id="locationName" placeholder="Ví dụ: Chợ đêm Hà Nội">
+    
+    <label for="locationDesc">Mô tả địa điểm:</label>
+    <input type="text" id="locationDesc" placeholder="Ví dụ: Chợ đêm nổi tiếng tại phố cổ">
+    
+    <div style="display: flex; gap: 10px;">
+      <div style="flex: 1;">
+        <label for="openHours">Giờ mở:</label>
+        <input type="time" id="openHours">
+      </div>
+      <div style="flex: 1;">
+        <label for="closeHours">Giờ đóng:</label>
+        <input type="time" id="closeHours">
+      </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
+      <label for="autoNextPage" style="margin: 0; cursor: pointer;">Tự động chuyển trang:</label>
+      <input type="checkbox" id="autoNextPage" style="width: auto; cursor: pointer;">
+    </div>
   </div>
 
   <div class="btn-group">

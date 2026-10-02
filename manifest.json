@@ -9,7 +9,8 @@
     "storage"
   ],
   "host_permissions": [
-    "https://www.booking.com/attractions/*"
+    "https://www.booking.com/attractions/*",
+    "https://www.tripadvisor.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -17,7 +18,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.booking.com/attractions/*"],
+      "matches": [
+        "https://www.booking.com/attractions/*",
+        "https://www.tripadvisor.com/*"
+      ],
       "js": ["content.js"]
     }
   ]
